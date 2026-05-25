@@ -1,0 +1,107 @@
+.load{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f172a,#7f1d1d,#f59e0b);
+color:white;
+}
+
+.loader{
+width:70px;
+height:70px;
+border:8px solid rgba(255,255,255,0.3);
+border-top:8px solid #f59e0b;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+to{transform:rotate(360deg);}
+}
+
+.note{
+position:fixed;
+top:20px;
+right:20px;
+background:#22c55e;
+color:white;
+padding:16px 25px;
+border-radius:16px;
+z-index:999;
+box-shadow:0 0 25px rgba(0,0,0,0.3);
+}
+
+/* full light mode */
+body.light{
+background:#fff7ed;
+}
+
+body.light .bullpage,
+body.light .paypage,
+body.light .teampage,
+body.light .placepage,
+body.light .aboutpage,
+body.light .gallerypage,
+body.light .adminpage{
+background:linear-gradient(135deg,#fff7ed,#fde68a,#fed7aa);
+color:#111827;
+}
+.toast{
+
+position:fixed;
+
+top:20px;
+right:20px;
+
+padding:18px 30px;
+
+background:#22c55e;
+
+color:white;
+
+border-radius:18px;
+
+font-size:18px;
+
+z-index:999;
+
+animation:slide 0.5s ease;
+
+box-shadow:
+0 0 25px
+rgba(0,0,0,0.3);
+
+}
+
+@keyframes slide{
+
+from{
+transform:
+translateX(100px);
+
+opacity:0;
+}
+
+to{
+transform:
+translateX(0);
+
+opacity:1;
+}
+
+}
+.footer{
+
+margin-top:50px;
+
+padding:35px;
+
+text-align:center;
+
+background:
+rgba(0,0,0,0.3);
+
+color:white;
+}
