@@ -7,17 +7,9 @@ route.post("/login", (req, res) => {
 const { user, pass } = req.body
 
 if(user === "admin" && pass === "12345"){
-
-res.json({
-msg:"login ok"
-})
-
+res.json({ msg:"login ok" })
 }else{
-
-res.json({
-msg:"Invalid username or password"
-})
-
+res.json({ msg:"Invalid username or password" })
 }
 
 })
