@@ -30,7 +30,7 @@ const upiLink =
 `upi://pay?pa=${upi}&pn=Eruthu Festival&am=${data.amount}&cu=INR&tn=Bull Registration Fee`
 
 const getPay = async () => {
-const res = await axios.get("http://localhost:5000/pay/all")
+const res = await axios.get("https://eruthu-backend.onrender.com/pay/all")
 setList(res.data)
 }
 
@@ -39,7 +39,7 @@ getPay()
 },[])
 
 const savePayment = async () => {
-await axios.post("http://localhost:5000/pay/add",data)
+await axios.post("https://eruthu-backend.onrender.com/pay/add",data)
 alert("Payment Record Saved")
 
 setData({
@@ -58,7 +58,7 @@ const deletePayment = async (id) => {
 const ok = window.confirm("Delete this payment record?")
 if(!ok) return
 
-await axios.delete(`http://localhost:5000/pay/delete/${id}`)
+await axios.delete(`https://eruthu-backend.onrender.com/pay/delete/${id}`)
 alert("Payment Deleted")
 getPay()
 }

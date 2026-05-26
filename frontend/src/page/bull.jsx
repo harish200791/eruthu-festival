@@ -45,7 +45,7 @@ async () => {
 
 const res =
 await axios.get(
-"http://localhost:5000/bull/all"
+"https://eruthu-backend.onrender.com/bull/all"
 )
 
 setList(res.data)
@@ -119,7 +119,7 @@ image
 }
 
 await axios.post(
-"http://localhost:5000/bull/add",
+"https://eruthu-backend.onrender.com/bull/add",
 form
 )
 
@@ -289,7 +289,7 @@ key={item._id}
 >
 
 <img
-src={`http://localhost:5000/upload/${item.image}`}
+src={`https://eruthu-backend.onrender.com/upload/${item.image}`}
 className="bullimg"
 />
 

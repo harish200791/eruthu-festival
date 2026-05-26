@@ -19,7 +19,7 @@ setData({...data,[e.target.name]:e.target.value})
 }
 
 const getTeam = async () => {
-const res = await axios.get("http://localhost:5000/team/all")
+const res = await axios.get("https://eruthu-backend.onrender.com/team/all")
 setList(res.data)
 }
 
@@ -27,7 +27,7 @@ useEffect(()=>{ getTeam() },[])
 
 const submit = async (e) => {
 e.preventDefault()
-await axios.post("http://localhost:5000/team/add",data)
+await axios.post("https://eruthu-backend.onrender.com/team/add",data)
 alert("Committee Member Added")
 setData({name:"",role:"",phone:"",village:"",amount:"",work:""})
 getTeam()

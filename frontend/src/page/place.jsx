@@ -21,7 +21,7 @@ setData({
 
 const getPlace = async () => {
 const res = await axios.get(
-"http://localhost:5000/place/all"
+"https://eruthu-backend.onrender.com/place/all"
 )
 setList(res.data)
 }
@@ -33,7 +33,7 @@ getPlace()
 const savePlace = async () => {
 
 await axios.post(
-"http://localhost:5000/place/add",
+"https://eruthu-backend.onrender.com/place/add",
 data
 )
 
@@ -59,7 +59,7 @@ const ok = window.confirm(
 if(!ok) return
 
 await axios.delete(
-`http://localhost:5000/place/delete/${id}`
+`https://eruthu-backend.onrender.com/place/delete/${id}`
 )
 
 alert("Place Deleted")

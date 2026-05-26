@@ -21,7 +21,7 @@ const submit = async (e) => {
 e.preventDefault()
 
 const res = await axios.post(
-"http://localhost:5000/auth/reg",
+"https://eruthu-backend.onrender.com/auth/reg",
 data
 )
 

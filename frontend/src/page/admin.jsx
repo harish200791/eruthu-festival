@@ -7,7 +7,7 @@ const [list,setList] = useState([])
 const [search,setSearch] = useState("")
 
 const getBull = async () => {
-const res = await axios.get("http://localhost:5000/bull/all")
+const res = await axios.get("https://eruthu-backend.onrender.com/bull/all")
 setList(res.data)
 }
 
@@ -19,7 +19,7 @@ const deleteBull = async (id) => {
 const ok = window.confirm("Delete this bull permanently?")
 if(!ok) return
 
-await axios.delete(`http://localhost:5000/bull/delete/${id}`)
+await axios.delete(`https://eruthu-backend.onrender.com/bull/delete/${id}`)
 alert("Bull Deleted")
 getBull()
 }
@@ -28,7 +28,7 @@ const editBull = async (id) => {
 const owner = prompt("Enter new owner name")
 if(!owner) return
 
-await axios.put(`http://localhost:5000/bull/update/${id}`,{
+await axios.put(`https://eruthu-backend.onrender.com/bull/update/${id}`,{
 owner:owner
 })
 
