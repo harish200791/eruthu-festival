@@ -2,10 +2,24 @@ const express = require("express")
 
 const route = express.Router()
 
-const auth = require("../control/auth")
+route.post("/login", (req, res) => {
 
-route.post("/reg", auth.reg)
+const { user, pass } = req.body
 
-route.post("/login", auth.login)
+if(user === "admin" && pass === "12345"){
+
+res.json({
+msg:"login ok"
+})
+
+}else{
+
+res.json({
+msg:"Invalid username or password"
+})
+
+}
+
+})
 
 module.exports = route
